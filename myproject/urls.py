@@ -25,17 +25,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
-    
     path('',views.members,name="home"),
-    
     path('collections',views.collections,name="collections"),
     path('collections/<str:name>',views.collectionviews,name="collections"),
     path('collections/<str:cname>/<str:pname>',views.product_details,name="product_details"),
     path('login',views.login_page,name="login"),
     path('logout',views.logout_page,name="logout"),
     path('register',views.register,name="register"),
-    
     path('addtocart',views.add_to_cart,name="addtocart"),
     path('cart',views.cart_page,name="cart"),
     path('remove_cart/<str:cid>',views.remove_cart,name="remove_cart"),
